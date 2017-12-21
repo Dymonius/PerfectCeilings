@@ -1,0 +1,76 @@
+.advantages-firm-wrapper {
+  background: #8b8b8b url(../images/banner2.jpg) no-repeat center;
+  background-size: cover;
+  color: $white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+.advantages-firm {
+  text-align: center;
+  padding: 50px 20px;
+  text-shadow: 0 0 7px rgba(0, 0, 0, 1);
+
+}
+
+.advantages-firm__header {
+  font-size: 2.1875rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.advantages-firm__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.advantages-firm__item {
+  width: 230px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.advantages-firm__icon {
+  width: 175px;
+  line-height: 175px;
+  margin: auto;
+  font-size: 90px;
+  color: $white;
+}
+
+.advantages-firm__name {
+  margin: 20px 0 10px;
+  font-weight: bold;
+  font-size: 1.125rem;
+
+}
+
+.advantages-firm__description {
+  font-size: 1.125rem;
+}
+
+@media (max-width: 650px) {
+  .advantages-firm-wrapper{
+    display: block;
+    height: 100%;
+  }
+  .advantages-firm__name {
+    margin-top: 10px;
+  }
+  .advantages-firm__icon {
+    width: 100px;
+    line-height: 100px;
+  }
+}
+
+@media (max-width: 515px) {
+  .advantages-firm__item {
+    border-bottom: 1px solid $white;
+  }
+}

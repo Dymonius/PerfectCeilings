@@ -1,0 +1,46 @@
+.hamburger {
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 20px;
+  right: 10px;
+}
+
+.hamburger .hamburger__before,
+.hamburger .hamburger__main,
+.hamburger .hamburger__after {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: $white;
+  margin-bottom: 6px;
+  transition: transform 0.2s;
+}
+
+.hamburger .hamburger__after {
+  margin-bottom: 0;
+}
+
+.hamburger:hover .hamburger__before {
+  transform: translateY(-2px);
+}
+
+.hamburger:hover .hamburger__after {
+  transform: translateY(2px);
+}
+
+.hamburger--active .hamburger__main, .hamburger--active:hover .hamburger__main {
+  display: none;
+}
+
+.hamburger--active .hamburger__before, .hamburger--active:hover .hamburger__before {
+  margin: 0;
+  transition: transform 0.5s;
+  transform: translateY(2px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__after, .hamburger--active:hover .hamburger__after {
+  margin: 0;
+  transition: transform 0.5s;
+  transform: translateY(0) rotate(-45deg);
+}

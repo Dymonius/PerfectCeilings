@@ -1,0 +1,59 @@
+.calculator {
+  min-height: 650px;
+  padding: 30px 100px;
+  background: #8b8b8b url(../images/banner6.jpg) no-repeat center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  font-size: 1.5625rem;
+  text-shadow: 0 0 7px rgba(0, 0, 0, 1);
+}
+
+.calculator__text {
+  font-size: 1.5625em;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 3rem ;
+  margin: 50px auto;
+}
+
+.calculator__range {
+  max-width: 300px;
+  margin: auto;
+}
+
+.irs-bar{
+  border-top: 1px solid $orange;
+  border-bottom: 1px solid $orange;
+  background: $orange;
+}
+
+.irs-bar-edge {
+  border: 1px solid $orange;
+  border-top: 1px solid $orange;
+  border-bottom: 1px solid $orange;
+  background: $orange;
+}
+
+.irs-from, .irs-to, .irs-single {
+  background: $orange;
+}
+
+.calculator__square {
+  margin: 50px auto 30px;
+}
+
+.yellow-text--calculator {
+  text-transform: lowercase ;
+}
+
+.calculator__description {
+  margin: 50px auto;
+}
+
+@media (max-width: 650px) {
+  .calculator {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}

@@ -1,0 +1,20 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.is-hidden {
+  display: none!important;
+}
+
+.visually-hidden {
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+.yellow-text {
+  text-transform: uppercase;
+  background-color: $orange;
+  padding: 0 8px;
+}
+

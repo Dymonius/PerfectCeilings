@@ -1,0 +1,54 @@
+.ceilings-types {
+  text-align: center;
+}
+
+.ceilings-types__header {
+  font-size: 2.1875rem;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.ceilings-types__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.ceilings-types__item {
+  font-size: 1.25rem;
+  color: #5d5d5d;
+  padding: 10px 30px;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.ceilings-types__item:hover {
+  color: black;
+}
+
+.ceilings-types__item--active {
+  border-bottom: 1px solid $orange;
+  color: black;
+}
+
+.ceilings-types__photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ceilings-types__photos img {
+  max-width: 100%;
+}
+
+
+.is-hidden--photo {
+  display: none;
+}
+
+
+
+

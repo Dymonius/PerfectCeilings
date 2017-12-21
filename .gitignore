@@ -1,0 +1,10 @@
+
+package-lock.json
+.idea/
+*.iml
+out
+gen
+node_modules
+npm-debug.log
+.DS_Store
+build

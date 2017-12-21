@@ -1,0 +1,22 @@
+@import "global/reset";
+@import "global/mixins";
+@import "global/fonts";
+@import "global/vars";
+@import "global/base";
+@import "global/common";
+@import "global/icons";
+@import "global/hamburger";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "global/ion.rangeSlider";
+@import "global/ion.rangeSlider.skinHTML5";
+
+
+
+
+@import "sections/header";
+@import "sections/advantages";
+@import "sections/advantages-firm";
+@import "sections/ceilings-types";
+@import "sections/calculator";
+
+

@@ -1,0 +1,140 @@
+.header-main {
+  padding: 20px;
+  height: 100vh;
+  background: #8b8b8b url(../images/banner1.jpg) no-repeat center;
+  background-size: cover;
+  color: $white;
+  font-weight: bold;
+}
+
+.header-main__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 320px;
+}
+
+.logo a {
+  display: block;
+}
+
+.logo__top {
+  font-size: 1.56rem;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.logo__bottom {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $orange;
+  padding: 3px;
+  margin-left: 30px;
+}
+
+.phone {
+  margin-left: auto;
+  font-size: 1.75rem;
+  margin-right: 50px;
+  transition: 0.3s;
+
+  &:hover {
+    color: $light-grey;
+  }
+
+  i {
+    margin-right: 20px;
+  }
+}
+
+.header-main__center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 94%;
+  text-align: center;
+  text-shadow: 0 0 7px rgba(0, 0, 0, 1);
+}
+
+.header-main__best-price-text {
+  font-size: 3.125rem;
+  margin-bottom: 40px;
+}
+
+.header-main__promo {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+
+.input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+.form__header .input:first-child {
+  margin-right: 30px;
+}
+
+.button {
+  background-color: $blue;
+  letter-spacing: 0.1rem;
+  color: $white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px 40px;
+  border: 1px solid transparent;
+}
+
+.button:hover {
+  border: 1px solid $orange;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .phone i {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .header-main {
+    height: auto;
+  }
+  .header-main__best-price-text {
+    margin-top: 30px;
+  }
+  .logo {
+    display: none;
+  }
+  .phone {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .header-main__promo {
+    margin-bottom: 30px;
+  }
+  .form__header .input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .form__header .input:first-child {
+    margin-right: 0;
+  }
+
+}
+
+
