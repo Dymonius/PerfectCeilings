@@ -33,3 +33,12 @@
 
   }
 }
+
+@media (max-width: 350px) {
+  .logo {
+    width: 250px;
+  }
+  .logo__bottom {
+    width: 150px;
+  }
+}

@@ -6,7 +6,15 @@ window.onload = function () {
         var hamburger = document.querySelector('.hamburger');
         var menu = document.querySelector('.menu');
         var menuWraper = document.querySelector('.menu-wraper');
+        var links = document.querySelectorAll('.menu__link');
         hamburger.addEventListener('click', function () {
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function () {
+                    menu.classList.remove('menu--active');
+                    menuWraper.classList.remove('menu-wraper--active');
+                    hamburger.classList.remove('hamburger--active');
+                })
+            }
             menu.classList.toggle('menu--active');
             menuWraper.classList.toggle('menu-wraper--active');
             hamburger.classList.toggle('hamburger--active')
@@ -175,6 +183,15 @@ $(document).ready(function () {
                 }
             }
         ]
+    });
+});
+
+$(document).ready(function(){
+    $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
+        e.preventDefault();
+        var t = 1000;
+        var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+        $('html,body').stop().animate({ scrollTop: $(d).offset().top - 100}, t);
     });
 });
 
