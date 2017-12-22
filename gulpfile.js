@@ -59,7 +59,7 @@ gulp.task('styles:compile', function () {
 /* ------------ js ------------- */
 gulp.task('js', function () {
     return gulp.src([
-        'source/js/jquery-1.12.3.min.js',
+        'source/js/jquery-3.2.1.min (1).js',
         'source/js/ion.rangeSlider.js',
         'source/js/main.js'
     ])
@@ -101,9 +101,14 @@ gulp.task('copy:images', function () {
         .pipe(imagemin())
         .pipe(gulp.dest('build/images'));
 });
+/* ------------ Copy slick ------------- */
+gulp.task('copy:slick', function () {
+    return gulp.src('./source/slick/**/*.*')
+        .pipe(gulp.dest('build/slick'));
+});
 
 /* ------------ Copy ------------- */
-gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
+gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images', 'copy:slick'));
 
 /* ------------ Watchers ------------- */
 gulp.task('watch', function () {

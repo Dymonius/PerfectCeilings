@@ -19,6 +19,7 @@
 .ceilings-types__item {
   font-size: 1.25rem;
   color: #5d5d5d;
+  margin-bottom: 10px;
   padding: 10px 30px;
   cursor: pointer;
   border-bottom: 1px solid transparent;
@@ -44,9 +45,36 @@
   max-width: 100%;
 }
 
+.ceilings-types__photo {
+  position: relative;
+}
 
 .is-hidden--photo {
   display: none;
+}
+
+.overlay {
+  padding: 5px 10px;
+  background-color: rgba(246, 182, 61, 0.75);
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  font-weight: bold;
+  color: $white;
+  @include centerer-xy();
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, 100px);
+  transition: 0.5s;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.ceilings-types__photo:hover .overlay {
+  @include centerer-xy();
+  opacity: 1;
 }
 
 

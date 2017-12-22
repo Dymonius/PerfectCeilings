@@ -1,5 +1,51 @@
 window.onload = function () {
+
+    //Menu
+
+    (function () {
+        var hamburger = document.querySelector('.hamburger');
+        var menu = document.querySelector('.menu');
+        var menuWraper = document.querySelector('.menu-wraper');
+        hamburger.addEventListener('click', function () {
+            menu.classList.toggle('menu--active');
+            menuWraper.classList.toggle('menu-wraper--active');
+            hamburger.classList.toggle('hamburger--active')
+        });
+        menuWraper.addEventListener('click', function () {
+            menu.classList.toggle('menu--active');
+            menuWraper.classList.toggle('menu-wraper--active');
+            hamburger.classList.toggle('hamburger--active')
+        })
+
+    })();
+
+    //Sticky Menu
+    (function () {
+        var stickElement = document.querySelector(".header-main__top");
+        var hamburger = document.querySelector('.hamburger');
+        var fixed = false;
+        var fixPoint = stickElement.offsetTop + stickElement.offsetHeight; //Получение расстояния по оси Y от верха страницы до элемента
+
+        window.onscroll = function () {
+            if (window.innerWidth > 100) {
+                var distance = fixPoint - window.pageYOffset;
+                var offset = window.pageYOffset; //Получение текущей прокрутки сверху
+                if ((distance <= 0) && !fixed) {
+                    stickElement.classList.add('header-main__top--active');
+                    hamburger.classList.add('hamburger--fixed');
+
+                    fixed = true;
+                } else if (fixed && (offset <= fixPoint)) {
+                    stickElement.classList.remove('header-main__top--active');
+                    hamburger.classList.add('hamburger--fixed');
+                    fixed = false;
+                }
+            }
+        };
+    })();
+
     //Image select
+
     (function () {
         var links = document.querySelectorAll('.ceilings-types__item');
         var images = document.querySelectorAll('.ceilings-types__photo img');
@@ -72,6 +118,9 @@ window.onload = function () {
         }
     })()
 };
+
+//Range slider(calculator)
+
 var $range = $("#example_id");
 $range.ionRangeSlider(
     {
@@ -89,5 +138,44 @@ $range.on("change", function () {
     square.innerHTML = value + ' м2';
 
     var price = document.querySelector('.calculator__price-number');
-    price.innerHTML = value*200 + ' грн.'
+    price.innerHTML = value * 200 + ' грн.'
 });
+
+
+$(document).ready(function () {
+    //Comments slider
+    $('.comments__slider').slick({});
+
+    //works slider
+
+    $('.works').slick({
+        lazyLoad: 'ondemand',
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        centerMode: true,
+        centerPadding: '100px',
+        speed: 300,
+        slidesToShow: 2,
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: {
+                    centerMode: true,
+                    slidesToShow: 1,
+                    centerPadding: '100px'
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    centerMode: false,
+                    slidesToShow: 1,
+                    centerPadding: '0px'
+                }
+            }
+        ]
+    });
+});
+
+

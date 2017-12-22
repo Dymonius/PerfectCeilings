@@ -1,4 +1,6 @@
 .hamburger {
+  position: relative;
+  z-index: 999;
   cursor: pointer;
   display: block;
   width: 30px;
@@ -36,11 +38,17 @@
 .hamburger--active .hamburger__before, .hamburger--active:hover .hamburger__before {
   margin: 0;
   transition: transform 0.5s;
-  transform: translateY(2px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
+  position: fixed;
 }
 
 .hamburger--active .hamburger__after, .hamburger--active:hover .hamburger__after {
   margin: 0;
   transition: transform 0.5s;
-  transform: translateY(0) rotate(-45deg);
+  transform: translateY(5px) rotate(-45deg);
+  position: fixed;
+}
+
+.hamburger--fixed {
+  position: fixed;
 }
