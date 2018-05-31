@@ -186,13 +186,53 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function(){
-    $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
+$(document).ready(function () {
+    $('a[href^="#"], *[data-href^="#"]').on('click', function (e) {
         e.preventDefault();
         var t = 1000;
         var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
-        $('html,body').stop().animate({ scrollTop: $(d).offset().top - 100}, t);
+        $('html,body').stop().animate({scrollTop: $(d).offset().top - 100}, t);
     });
+});
+
+//Button to form
+(function () {
+    var formLayer = document.querySelector('.form-layer');
+    var form = document.querySelector('.form');
+    var buttons = document.querySelectorAll('.button--to-form');
+    var closeButton = document.querySelector('.close-button');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            formLayer.classList.add('form-layer--active');
+        });
+    }
+    form.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+    formLayer.addEventListener('click', function () {
+        formLayer.classList.remove('form-layer--active');
+    });
+    closeButton.addEventListener('click', function () {
+        formLayer.classList.remove('form-layer--active');
+    })
+
+})();
+
+//send form
+$(document).ready(function() {
+
+    $(".form").submit(function() {
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(".form__form-before").addClass("form__form-before--disabled");
+            $(".form__form-after").addClass("form__form-after--active");
+        });
+        return false;
+    });
+
 });
 
 

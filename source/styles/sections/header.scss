@@ -100,7 +100,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 9;
 }
 
 .menu--active {
@@ -128,18 +128,6 @@
   text-transform: uppercase;
   max-width: 700px;
   margin-bottom: 60px;
-}
-
-.input {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  margin-bottom: 50px;
-}
-
-.form__header .input:first-child {
-  margin-right: 30px;
 }
 
 .button {
@@ -180,14 +168,6 @@
   }
   .header-main__promo {
     margin-bottom: 30px;
-  }
-  .form__header .input {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .form__header .input:first-child {
-    margin-right: 0;
   }
   .menu {
     min-width: 300px;
